@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  /* Avce repeat tous les elements ont la même width */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  /* Definie la height (hauter) de la div (de l'element) */
+  /* grid-auto-rows: 100px; */
+  grid-auto-rows: minmax(100px);
+}
+
+.nested {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Height */
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+
+.nested > div {
+  background-color: #ccc;
+  padding: 1rem;
+}
+
+.grid-container > div {
+  background-color: #eee;
+  padding: 1rem;
+}
+
+.grid-container > div:nth-child(odd) {
+  background-color: #ddd;
+}

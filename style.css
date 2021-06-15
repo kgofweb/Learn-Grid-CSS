@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  /* L'espace entre les colonnes */
+  column-gap: 1rem;
+  /* L'espace entre les lignes */
+  row-gap: 1rem;
+  /* L'espace entre les lignes et colonnes */
+  gap: 1rem;
+}
+
+.grid-container > div {
+  background-color: #eee;
+  padding: 1rem;
+}
+
+.grid-container > div:nth-child(odd) {
+  background-color: #ddd;
+}
